@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã sinh viên:"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/student_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mã sinh viên"
+        android:textSize="20dp"
+        android:background="@drawable/bg_ui"/>
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="xem danh sách"
+        android:src="@drawable/ic_action_setting"
+        android:tint="@android:color/white" />
+
+
+
+    <TextView
+        android:id="@+id/grade_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm:"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"/>
+
+
+    <ListView
+        android:id="@+id/grade_list"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/student_id"
+        tools:listitem="@layout/dong_diem" />
+    <RelativeLayout
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".DiemActivity">
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
